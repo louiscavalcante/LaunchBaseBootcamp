@@ -1,0 +1,38 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<header class="header_user_search">
+    <div class="header_container">
+        <div class="header_grid">
+            <a class="foodfy_logo" href="/">Foodfy</a>
+            <a href="/about">About</a>
+            <a href="/recipes">Recipes</a>
+            <a href="/chefs"><strong>Chefs</strong></a>
+        </div>
+    </div>
+</header>
+
+<section class="chefs">
+    <div class="chefs_container">
+
+        {% for item in items %}
+            <a class="chef" id="{{ item.id }}" href="/admin/chefs/{{ item.id}}">
+                <div class="chef__image-container">
+                    <img src="{{ item.avatar_url }}" alt="{{ item.name }}">               
+                </div>
+                <div class="chef__content">
+                    <p class="chef-name"> 
+                        {{ item.name }}
+                    </p>
+                    <p class="chef-total_recipes">
+                        {{ item.total_recipes }} recipes
+                    </p>
+                </div>
+            </a>
+        {% endfor %}
+        
+    </div>
+</section>
+
+{% endblock %}

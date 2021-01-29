@@ -1,0 +1,45 @@
+{% extends "layout.njk" %}
+
+{% block courses %}
+
+        <section class="cards">
+
+        {% for item in items %}
+
+            <div class="card" id="{{ item.id }}">
+                <div class="card__image-container">
+                    <img src="{{ item.image }}" alt="Starter Cursos Gratuitos">               
+                </div>
+                <div class="card__content">
+                    <p> 
+                        <strong class="{{ item.descriptionClass }}">{{ item.descriptionBold }}</strong>
+                        {{ item.description }}
+                    </p>
+                    <div class="card__info">
+                        <p>{{ item.modules }}</p>
+                        <p class="card__price">{{ item.price }}</p>
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+
+        </section>
+
+        <div class="modal-overlay">
+            <div class="modal">
+                <a class="close-modal">
+                    <i class="material-icons">close</i>
+                </a>
+
+                <a class="maximize-modal">
+                    <i class="material-icons">fullscreen</i>
+                </a>
+
+                <div class="modal-content">
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

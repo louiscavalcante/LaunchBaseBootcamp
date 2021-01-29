@@ -1,0 +1,48 @@
+{% extends "admin/adminLayout.njk" %}
+
+{% block content %}
+
+<header class="header_admin">
+    <div class="header_container">
+        <div class="header_grid">
+            <a class="foodfy_logo">Foodfy</a>
+            <a href="/admin/recipes">Recipes</a>
+            <a href="/admin/chefs" style="filter: brightness(50%)">Chefs</a>
+        </div>
+    </div>
+</header>
+
+<div class="showInfoAdminEditMain">
+    <div class="showInfoAdminEditContainer">
+        <div class="showInfoAdminEdit">
+            <h1>
+                Recipe: {{ recipe.title }}
+            </h1>
+            <form id="form-delete" action="/admin/recipes?_method=DELETE" method="post">
+
+                <input type="hidden" name="id" value="{{ recipe.id }}">
+                <button type="submit">Delete</button>
+
+            </form>
+
+            <button type="submit" form="form-edit">Save Recipe</button>
+            
+        </div>
+    </div>
+</div>
+
+<form id="form-edit" method="POST" action="/admin/recipes?_method=PUT">   
+
+    <input type="hidden" name="id" value="{{ recipe.id }}">
+    
+    <div class="showInfoAdminEditMainItems">
+        <div class="showInfoAdminEditContainerItems">
+            {% include 'admin/recipes/fields.njk' %}
+        </div>
+    </div>
+
+</form>
+
+{% include 'confirm.njk' %}
+
+{% endblock content %}

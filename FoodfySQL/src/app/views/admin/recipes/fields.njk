@@ -1,0 +1,82 @@
+<div class="item edit">
+    <div>Recipe Image</div>
+    <div>
+        <input
+            type="url"
+            name="image"
+            placeholder="http://"
+            value="{{ recipe.image }}"
+        >
+    </div>
+</div>
+
+<div class="item edit">
+    <div>Chef</div>
+    <div>
+        <select class="selectChefEdit" name="chef_id">
+            {% for chef in chefOptions %}}
+                <option value="{{ chef.id }}"
+                    {% if recipe.chef_id == chef.id %} selected {% endif %}>
+                        {{ chef.name }}
+                </option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+
+<div class="item edit">
+    <div>Recipe Title</div>
+    <div>
+        <input
+            type="text"
+            name="title"
+            value="{{ recipe.title }}"
+        >
+    </div>
+</div>
+
+<div class="item edit">
+    <div>Ingredients</div>
+    <div>
+        <ul id="addStepIngredient">
+            {% for ingredient in recipe.ingredients %}
+                <input
+                    type="text"
+                    name="ingredients[]"
+                    value="{{ ingredient }}"
+                >
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="addIngredient">
+        Add Ingredients
+    </div>
+</div>
+
+<div class="item edit">
+    <div>Preparation</div>
+    <div>
+        <ul id="addStepPreparation">
+            {% for step in recipe.preparation %}
+                <input
+                    type="text"
+                    name="preparation[]"
+                    value="{{ step }}"
+                >
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="addPreparationSteps">
+        Add Preparation Step
+    </div>
+</div>
+
+<div class="item edit">
+    <div>Information</div>
+    <div class="informationEdit">
+        <textarea 
+            name="information"
+            value="{{ recipe.information }}"
+        >{{ recipe.information }}</textarea>
+    </div>
+</div>

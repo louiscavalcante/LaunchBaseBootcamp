@@ -1,0 +1,80 @@
+{% extends "admin/recipes/adminLayout.njk" %}
+
+{% block content %}
+
+<div class="showInfo">
+    <h1>
+        Recipe: {{ recipe.title }}
+    </h1>
+    <span class="edit-container">
+        <a href="/admin/recipes/{{ recipe.id }}/edit" class="button">Edit Recipe</a>
+    </span>
+</div>
+
+<section class="cards_eachRecipe">
+
+    <div class="card_eachRecipe" id="">
+        <div class="card__image-container_eachRecipe">
+            <img src="{{ recipe.image }}" alt="{{ recipe.title }}">               
+        </div>
+        <div class="card__content_eachRecipe">
+            <p class="title-string_eachRecipe"> 
+                {{ recipe.title }}
+            </p>
+            <p class="author-string_eachRecipe">
+                {{ recipe.author }}
+            </p>
+        </div>
+
+        <div class="details_container">
+            
+            <div class="details_main_container">
+                <a class="details_main_message">
+                    Ingredients
+                </a>
+        
+            </div>
+
+            <div class="info_ingredients details_paragraph">
+                <ul>
+                    {% for item in recipe.ingredients %}
+                    <li>
+                        {{ item + ';'}}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="details_main_container">
+                <a class="details_main_message">
+                    Preparation
+                </a>
+            </div>
+
+            <div class="info_preparation details_paragraph">
+                {% for item in recipe.preparation %}
+                <p>
+                    {{ item }}
+                </p>
+                {% endfor %}
+            </div>
+
+            <div class="details_main_container">
+                <a class="details_main_message">
+                    Information
+                </a>
+            </div>
+
+            <div class="info_information details_paragraph_information">
+                <p>
+                    {{ recipe.information }}
+                </p>
+            </div>
+            
+        </div>
+
+    </div>
+    
+</section>
+
+{% endblock %}

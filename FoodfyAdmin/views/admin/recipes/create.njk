@@ -1,0 +1,70 @@
+{% extends "admin/recipes/adminLayout.njk" %}
+
+{% block content %}
+
+<form class="cardCreate" method="POST" action="/admin/recipes">
+
+    <div class="showInfoAdminCreate">
+        <h1>
+            Create Recipe
+        </h1>
+
+        <button type="submit">Save Recipe</button>
+    </div>
+    
+    <div class="item">
+        <div>Recipe Image</div>
+        <div>
+            <input
+                type="url"
+                name="image"
+                placeholder="http://"
+            >
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Ingredients</div>
+        <div>
+            <ul id="addStepIngredientCreate">
+                <input
+                    type="text"
+                    name="ingredients"
+                    placeholder="Type one ingredient here."
+                >
+            </ul>
+        </div>
+        <div class="addIngredientCreate">
+            Add Ingredients
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Preparation</div>
+        <div>
+            <ul id="addStepPreparationCreate">
+                <input
+                    type="text"
+                    name="preparation"
+                    placeholder="Type one preparation step here."
+                >
+            </ul>
+        </div>
+        <div class="addPreparationStepsCreate">
+            Add Preparation Step
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Information</div>
+        <div class="informationCreate">
+            <textarea 
+                name="information"
+                placeholder="Type the recipe information."
+            ></textarea>
+        </div>
+    </div>
+
+</form>
+
+{% endblock content %}

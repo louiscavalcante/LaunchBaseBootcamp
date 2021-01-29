@@ -1,0 +1,93 @@
+{% extends "admin/adminLayout.njk" %}
+
+{% block content %}
+
+<header class="header_admin">
+    <div class="header_container">
+        <div class="header_grid">
+            <a class="foodfy_logo">Foodfy</a>
+            <a href="/admin/recipes">Recipes</a>
+            <a href="/admin/chefs" style="filter: brightness(50%)">Chefs</a>
+        </div>
+    </div>
+</header>
+
+<div class="showInfo">
+    <div class="showInfo_main">
+        <div class="showInfo_container">
+            <h1>
+                Recipe: {{ recipe.title }}
+            </h1>
+            <span class="edit-container">
+                <a href="/admin/recipes/{{ recipe.id }}/edit" class="button">Edit Recipe</a>
+            </span>
+        </div>
+    </div>
+</div>
+
+<section class="cards_recipes admin">
+
+    <div class="card_recipes admin" id="{{ recipe.id }}">
+        <div class="card__image-container_recipes admin">
+            <img src="{{ recipe.image }}" alt="{{ recipe.title }}">               
+        </div>
+        <div class="card__content_recipes admin">
+            <p class="title-string_recipes admin"> 
+                {{ recipe.title }}
+            </p>
+            <p class="author-string_recipes admin">
+                by {{ recipe.name }}
+            </p>
+        </div>
+
+        <div class="details_container eachRecipe admin">
+            
+            <div class="details_main_container admin">
+                <a class="details_main_message admin">
+                    Ingredients
+                </a>
+            </div>
+
+            <div class="info_ingredients details_paragraph admin">
+                <ul class="dashed">
+                    {% for item in recipe.ingredients %}
+                    <li>
+                        {{ item + ';'}}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="details_main_container admin">
+                <a class="details_main_message admin">
+                    Preparation
+                </a>
+            </div>
+
+            <div class="info_preparation details_paragraph admin">
+                <ul>
+                    {% for item in recipe.preparation %}
+                    <li>
+                        {{ item }}
+                    </li>
+                    {% endfor %}
+                </ul>    
+            </div>
+
+            <div class="details_main_container admin">
+                <a class="details_main_message admin">
+                    Information
+                </a>
+            </div>
+
+            <div class="info_information details_paragraph_information admin">
+                <p>
+                    {{ recipe.information }}
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,116 @@
+<div class="item">
+        <div>Avatar URL</div>
+        <div>
+            <input
+                type="url"
+                name="avatar_url"
+                placeholder="http://"
+                value="{{ teacher.avatar_url }}"
+            >
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Teacher</div>
+        <div>
+            <input 
+                type="text"
+                name="name"
+                placeholder="Type your name here"
+                value="{{ teacher.name }}"
+            >
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Birth Date</div>
+        <div>
+            <input
+                type="date"
+                name="birth"
+                value="{{ teacher.birth }}"
+            >
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Scholarity</div>
+        <select name="scholarity">
+            <option
+                value="None"
+                {% if teacher.scholarity == "None" %}
+                    selected
+                {% endif %}
+                >-- Select --
+            </option>
+            <option
+                value="High School"
+                {% if teacher.scholarity == "High School" %}
+                    selected
+                {% endif %}
+                >High School
+            </option>
+            <option
+                value="College Education"
+                {% if teacher.scholarity == "College Education" %}
+                    selected
+                {% endif %}
+                >College Education
+            </option>
+            <option
+                value="Master's Degree"
+                {% if teacher.scholarity == "Master's Degree" %}
+                    selected
+                {% endif %}
+                >Master's Degree
+            </option>
+            <option
+                value="Doctorate Degree"
+                {% if teacher.scholarity == "Doctorate Degree" %}
+                    selected
+                {% endif %}
+                >Doctorate Degree
+            </option>
+            
+        </select>
+    </div>
+
+    <div class="item">
+        <div>Type of Classes</div>
+        <div>
+            <span>
+                <input
+                    type="radio"
+                    name="classes"
+                    value="online"
+                    {% if teacher.classes == "online" %}
+                        checked
+                    {% endif %}
+                >Online Classes
+            </span>
+            <span>
+                <input
+                    type="radio"
+                    name="classes"
+                    value="tradicional"
+                    {% if teacher.classes == "tradicional" %}
+                        checked
+                    {% endif %}
+                >Tradicional Classes
+            </span>
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Fields</div>
+        <div>
+            <input
+                type="text"
+                name="fields"
+                placeholder="Type your teaching fields separated by comma"
+                value="{{ teacher.fields }}"
+            >
+        </div>
+    </div>
+
+    <button type="submit">Save</button>

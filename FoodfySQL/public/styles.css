@@ -1,0 +1,1242 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap";
+
+:root {
+    --primary-color: #7159c1;
+}
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+html,
+body {
+    background: white;
+    font-family: 'Roboto', regular;
+    height: 100vh;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    overflow-y: scroll;
+}
+#container {
+    min-height: 100vh;
+}
+#main {
+    /* overflow: auto; */
+    padding-bottom: 62px;
+}
+/* ======================================
+            USER HEADER 
+=========================================*/
+.header_user {
+    margin: 15px 15px 20px 15px;
+}
+.header_user .header_container .header_grid {
+    display: grid;
+    width: 100%;
+    max-width: 945px;
+    align-items: center;
+    margin: auto;    
+    grid-template-columns: 2fr 0.1fr 0.1fr 0.1fr 2fr;
+}
+.header_user .header_container .header_grid a {
+    color: black;
+    font-size: 1.6rem;
+    margin: 20px;
+    text-decoration: none;
+}
+.header_user .header_container .header_grid a:hover {
+    color: #D54F44;
+    transition: color 200ms;
+}
+.header_user .header_container .header_grid .foodfy_logo {
+    font-family: 'Times New Roman', regular;
+    font-size: 2.7rem;
+    letter-spacing: 2px;
+}
+/* ==============================================
+            USER HEADER - WITH SEARCH BUTTON
+=================================================*/
+.header_user_search {
+    margin: 15px 15px 20px 15px;
+}
+.header_user_search .header_container .header_grid {
+    display: grid;
+    width: 100%;
+    max-width: 945px;
+    align-items: center;
+    margin: auto;    
+    grid-template-columns: 1.346fr 0.1fr 0.1fr 0.1fr 2fr;
+}
+.header_user_search .header_container .header_grid a {
+    color: black;
+    font-size: 1.6rem;
+    margin: 20px;
+    text-decoration: none;
+}
+.header_user_search .header_container .header_grid a:hover {
+    color: #D54F44;
+    transition: color 200ms;
+}
+.header_user_search .header_container .header_grid .foodfy_logo {
+    font-family: 'Times New Roman', regular;
+    font-size: 2.7rem;
+    letter-spacing: 2px;
+}
+/* ======================================
+            USER FOOTER
+=========================================*/
+#footer {
+    background-color: #EEEEEE;
+    width: 100%;
+    height: 62px;
+    position: relative;
+    margin-top: -62px;
+    clear: both;
+}
+#footer div p {
+    padding: 23px;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #999999;
+    text-align: center;
+}
+/* ======================================
+            USER FILTER 
+=========================================*/
+.header_user .header_container .header_grid .header {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin-left: 80px;
+}
+.header_user .header_container .header_grid .header form {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    align-items: center;
+    grid-gap: 8px;
+}
+.header_user .header_container .header_grid .header form input {
+    border: 1px solid #DDDD;
+    border-radius: 4px;
+    padding: 11px 15px;
+    box-sizing: border-box;
+    height: 34px;
+    color: #999999;
+}
+.header_user .header_container .header_grid .header form button {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: white;
+}
+/* ======================================
+            USER INDEX - PANEL 
+=========================================*/
+.panel {
+    margin: 0px 15px 50px 15px;
+}
+.panel .panel_container {
+    background: #FBDFDB;
+    border-radius: 30px;
+    height: 366px;
+    display: flex;
+    width: 100%;
+    max-width: 930px;
+    margin: auto;
+}
+.panel .panel_text_container {
+    margin-top: 115px;
+    margin-left: 65px;
+    height: auto;
+    max-width: 600px;
+}
+.panel .panel_text_container .panel_container h1 {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.panel .panel_text_container .panel_container p {
+    max-width: 320px;
+    opacity: 0.7;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin-right: 30px;
+    font-weight: normal;
+}
+.img_container {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+.panel .panel_container img {
+    margin-top: 65px;
+    margin-right: 15px;
+    max-width: 930px;
+}
+.most_viewed {
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+.most_viewed .viewed_container {
+    display: flex;
+    width: 100%;
+    max-width: 930px;
+    margin: auto;
+}
+.most_viewed .viewed_container h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+/* ======================================
+            USER INDEX - CARDS 
+=========================================*/
+.cards {
+    margin: 0px 15px 0px 15px;
+}
+.cards_container {
+    display: grid;
+    width: 100%;
+    max-width: 920px;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+    gap: 0px 20px;
+}
+.card {
+    width: 100%;
+    max-width: 336px;
+    margin: auto;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    height: 190px;
+    text-decoration: none;
+}
+.card .card__image-container {
+    width: 100%;
+    max-width: 336px;
+    margin: 0 auto 15px auto;
+}
+.card .card__image-container img {
+    border-radius: 15px;
+    max-width: 100%;
+    max-height: 100px;
+}
+.card .card__content {
+    font-size: 1.8rem;
+    color: #111111;
+}
+.card .card__content .author-string {
+    font-size: 1.4rem;
+    color: #777777;
+    margin-top: 5px;
+}
+/* ======================================
+            USER ABOUT 
+=========================================*/
+.articles {
+    background: rgba(0, 0, 0, 0.0);
+    margin: 0 15px 10vh 15px;
+}
+.article {
+    background: rgba(0, 0, 0, 0.0);
+    display: grid;
+    width: 100%;
+    max-width: 930px;
+    margin: 0 auto 30px auto;
+    height: auto;
+    grid-template-columns: 1fr;
+}
+.article h4 {
+    font-size: 2.4rem;
+    margin: 0px 0px 30px 0px;
+}
+.article p {
+    font-size: 1.8rem;
+    color: #444444;
+    line-height: 2.8rem;
+}
+/* ======================================
+            USER RECIPES 
+=========================================*/
+.cards_recipes {    
+    margin: 0px 15px auto 15px;
+}
+.card_recipes {
+    background-color: rgba(1, 1, 100, 0);
+    display: flex;
+    width: 100%;
+    max-width: 930px;
+    margin: auto auto 30px auto;
+    flex-direction: column;
+}
+.card__image-container_recipes {
+    display: flex;
+    justify-content: center;
+}
+.card__image-container_recipes img {
+    border-radius: 15px;
+    max-height: 100%;
+    max-width: 100%;
+}
+.card__content_recipes {
+    font-size: 3.6rem;
+    color: #111111;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.card__content_recipes .author-string_recipes {
+    font-size: 2.0rem;
+    color: #777777;
+    margin-top: 5px;
+    text-align: center;
+}
+/* ======================================
+            USER RECIPES - DETAILS 
+=========================================*/
+.details_container {
+    margin: 0 0 0 0;
+}
+/* EACHRECIPE - UNIQUE */
+.details_container.eachRecipe {
+    margin: 0 0 10vh 0;
+}
+/* //////////\\\\\\\\\\ */
+.details_main_container {
+    position: relative;
+    background-color: rgba(1, 1, 100, 0);
+    max-width: 940px;
+    margin: 0 auto 30px auto;    
+}
+.details_main_message {
+    font-size: 24px;
+    font-weight: bold;
+}
+.button-hide {
+    color: #999999;
+    font-size: 1.4rem;
+    margin-left: 8px;
+    visibility: visible;
+    cursor: pointer;
+}
+.button-show {
+    color: #999999;
+    font-size: 1.4rem;
+    margin-left: -30px;
+    visibility: hidden;
+    cursor: pointer;
+}
+.details_paragraph {
+    font-size: 1.8rem;
+    color: #444444;
+    line-height: 2.8rem;
+    margin-bottom: 30px;
+}
+.details_paragraph ul {
+    list-style-position: inside;
+}
+.info_ingredients ul > li:before {
+    content: "-";
+}
+.info_ingredients ul {
+    list-style-type: none;
+}
+.info_preparation ul > li:before {
+    content: "-";
+}
+.info_preparation ul {
+    list-style-type: none;
+}
+.details_paragraph_information {
+    margin-top: -53px;
+    white-space: pre-line;
+    font-size: 1.8rem;
+    color: #444444;
+    line-height: 2.8rem;
+}
+/* ======================================
+            USER BUTTON - HIDE 
+=========================================*/
+.hide {
+    display: none;
+}
+/* ======================================
+            USER CHEFS 
+=========================================*/
+.chefs {
+    margin: 0px 15px 0px 15px;
+}
+.chefs_container {
+    display: grid;
+    width: 100%;
+    max-width: 940px;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0px 20px;
+}
+.chef {
+    width: 100%;
+    cursor: pointer;
+    height: 94px;
+    display: grid;
+    grid-template-columns: 84px 1fr;
+    text-decoration: none;
+}
+.chef .chef__image-container {
+    width: 64px;
+    height: 64px;
+}
+.chef .chef__image-container img {
+    border-radius: 100%;
+    max-width: 100%;
+    max-height: 64px;
+}
+.chef .chef__content {
+    font-family: 'Roboto', regular;
+    font-size: 18px;
+    color: #111111;
+    width: auto;
+}
+.chefs .chefs_container .chef .chef__content a {
+    font-family: 'Roboto', regular;
+    font-weight: bold;
+    font-size: 14px;
+    color: #6558C3;
+    text-decoration: none;
+}
+.chef .chef__content .chef-total_recipes {
+    font-size: 1.4rem;
+    color: #666666;
+    margin-top: 5px;
+}
+/* ======================================
+            USER SEARCH 
+=========================================*/
+.most_viewed_search {
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-top: 30px;
+}
+.most_viewed_search .viewed_container {
+    display: flex;
+    width: 100%;
+    max-width: 930px;
+    margin: auto;
+}
+.most_viewed_search .viewed_container h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.divisor {
+    height: 36.7vh;
+}
+/* ======================================
+            USER SEARCH - PAGINATION
+=========================================*/
+.pagination {
+    margin: 0;
+}
+.pagination a,
+.pagination span {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-right: 16px;
+}
+.pagination a:hover {
+    filter: brightness(0.3);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+                                ADMIN PAGES
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+
+/* ======================================
+            ADMIN HEADER 
+=========================================*/
+.header_admin {
+    background: #111111;
+    padding: 0 15px 0 15px;
+}
+.header_admin .header_container .header_grid {
+    display: grid;
+    width: 100%;
+    max-width: 960px;
+    align-items: center;
+    margin: auto;    
+    grid-template-columns: 0.5fr 0.1fr 2fr;
+    margin-bottom: 40px;
+}
+.header_admin .header_container a {
+    color: white;
+    font-size: 1.6rem;
+    margin: 20px;
+    text-decoration: none;
+}
+.header_admin .header_container .foodfy_logo {
+    font-family: 'Times New Roman', regular;
+    font-size: 2.7rem;
+    letter-spacing: 2px;
+}
+/* ======================================
+            ADMIN RECIPES INDEX 
+=========================================*/
+.admin_manageRecipes {
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+.admin_manageRecipes .admin_manageRecipes_container {
+    display: flex;
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+}
+.admin_manageRecipes .admin_manageRecipes_container h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+.cardsAdminMargin {
+    margin: 0px 15px 0px 15px;
+}
+.cardsAdmin {    
+    display: grid;
+    width: 100%;
+    max-width: 940px;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(385px, 1fr));
+    gap: 0px 20px;
+}
+.cardsAdmin_container {
+    display: grid;
+    width: 100%;
+    max-width: 470px;
+    grid-template-columns: 220px 1fr;
+    gap: 0px 20px;
+}
+.cardAdmin {
+    width: 172px;
+    height: 80px;
+}
+.card__image-containerAdmin img {
+    border-radius: 8.57px;
+    height: 65px;
+}
+.card__contentAdmin {
+    font-size: 1.8rem;
+    color: #111111;
+    margin-bottom: 20px;
+}
+.card__contentAdmin .author-stringAdmin {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #777777;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.card__contentAdmin .button-Admin {
+    font-family: 'Roboto', regular;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #6558C3;
+    text-decoration: none;
+}
+/* ======================================
+            ADMIN RECIPES SHOW 
+=========================================*/
+.showInfo {
+    margin: 0px 15px 5px 15px;
+}
+.showInfo_main {
+    display: flex;
+    width: 100%;
+    max-width: 930px;
+    margin: auto;
+}
+.showInfo_container {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+}
+.showInfo_container h1 {
+    font-size: 2.4rem;
+    color: #111111;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.edit-container {
+    background: #6558C3;
+    border-radius: 4px;
+    width: 136px;
+    height: 37px;
+    display: grid;
+    margin-left: 10px;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+}
+.edit-container a {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+.cards_recipes.admin {    
+    margin: 0px 15px 10vh 15px;
+}
+.card_recipes.admin {
+    background-color: rgba(1, 1, 100, 0);
+    display: flex;
+    width: 100%;
+    max-width: 930px;
+    margin: auto auto 30px auto;
+    flex-direction: column;
+}
+.card__image-container_recipes.admin {
+    display: flex;
+    justify-content: center;
+}
+.card__image-container_recipes.admin img {
+    border-radius: 15px;
+    max-height: 100%;
+    max-width: 100%;
+}
+.card__content_recipes.admin {
+    font-size: 3.6rem;
+    color: #111111;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.card__content_recipes.admin .author-string_recipes.admin {
+    font-size: 2.0rem;
+    color: #777777;
+    margin-top: 5px;
+    text-align: center;
+}
+.details_main_container.admin {
+    position: relative;
+    background-color: rgba(1, 1, 100, 0);
+    max-width: 940px;
+    margin: 0 auto 30px auto;    
+}
+.details_main_message.admin {
+    font-size: 24px;
+    font-weight: bold;
+}
+.details_paragraph.admin {
+    font-size: 1.8rem;
+    color: #444444;
+    line-height: 2.8rem;
+    margin-bottom: 30px;
+}
+.details_paragraph.admin ul {
+    list-style-position: inside;
+}
+.info_ingredients.admin ul > li:before {
+    content: "-";
+}
+.info_ingredients.admin ul {
+    list-style-type: none;
+}
+.info_preparation.admin ul > li:before {
+    content: "-";
+}
+.info_preparation.admin ul {
+    list-style-type: none;
+}
+.details_paragraph_information.admin {
+    margin-top: -53px;
+    white-space: pre-line;
+    font-size: 1.8rem;
+    color: #444444;
+    line-height: 2.8rem;
+}
+/* ======================================
+            ADMIN RECIPES EDIT 
+=========================================*/
+.showInfoAdminEditMain {
+    margin: 0px 15px 0px 15px;
+}
+.showInfoAdminEditContainer {
+    display: flex;
+    width: 100%;
+    max-width: 920px;
+    margin: auto;
+}
+.showInfoAdminEdit {
+    display: grid;
+    grid-template-columns: 6fr 1fr 1fr;
+}
+.showInfoAdminEdit h1 {
+    font-size: 2.4rem;
+    color: #111111;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+#form-delete button[type="submit"] {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: #DC4747;
+    color: white;
+    border-radius: 4px;
+    width: 92px;
+    height: 37px;
+    margin-left: 10px;
+}
+.showInfoAdminEdit button[type="submit"] {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: #6558C3;
+    color: white;
+    border-radius: 4px;
+    width: 139px;
+    height: 37px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.showInfoAdminEditMainItems {
+    margin: 0px 15px 25px 15px;
+}
+.showInfoAdminEditContainerItems {
+    display: flex;
+    width: 100%;
+    max-width: 920px;
+    margin: auto;
+    flex-direction: column;
+}
+.item.edit div:nth-child(1) {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.item.edit div input {
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    height: 30px;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+.item.edit .selectChefEdit {
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    background-color: white;
+    color: #757575;
+    height: 30px;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    padding-left: 16px;
+    display: flex;
+    width: 100%;
+}
+.item.edit div:last-child {
+    margin-bottom: 5px;
+}
+.addIngredient {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #6558C3;
+    text-align: left;
+    margin-top: 10px;
+}
+.addPreparationSteps {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #6558C3;
+    text-align: left;
+    margin-top: 10px;
+}
+.item.edit .informationEdit textarea {
+    min-height: 257px;
+    margin-bottom: 50px;
+    border: 1px solid #DDDDDD;
+    font-family: 'Roboto', regular;
+    font-size: 1.6rem;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    resize: none;
+    display: flex;
+    width: 100%;
+}
+/* ======================================
+            ADMIN RECIPES CREATE 
+=========================================*/
+.cardCreate {
+    margin: 0px 15px 25px 15px;
+}
+.showInfoAdminCreateContainer {
+    display: flex;
+    width: 100%;
+    max-width: 920px;
+    margin: auto;
+}
+.showInfoAdminCreate {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+}
+.showInfoAdminCreate h1 {
+    font-size: 2.4rem;
+    color: #111111;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.showInfoAdminCreate button[type="submit"] {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: #6558C3;
+    color: white;
+    border-radius: 4px;
+    width: 139px;
+    height: 37px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.cardCreateContainer {
+    display: flex;
+    width: 100%;
+    max-width: 920px;
+    margin: auto;
+    flex-direction: column;
+}
+.cardCreate .cardCreateContainer .item div:nth-child(1) {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.cardCreate .cardCreateContainer .item div input {
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 930px;
+    height: 30px;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+.cardCreate .item .selectChefCreate {
+    border: 1px solid #DDDDDD;
+    color: #757575;
+    background-color: white;
+    border-radius: 4px;
+    width: 950px;
+    height: 30px;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    padding-left: 16px;
+    display: flex;
+    width: 100%;
+}
+.cardCreate .item div:last-child {
+    margin-bottom: 5px;
+}
+.cardCreate .addIngredientCreate {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #6558C3;
+    text-align: left;
+    margin-top: 10px;
+}
+.cardCreate .addPreparationStepsCreate {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #6558C3;
+    text-align: left;
+    margin-top: 10px;
+}
+.cardCreate .item .informationCreate textarea {
+    min-height: 257px;
+    margin-bottom: 50px;
+    border: 1px solid #DDDDDD;
+    font-family: 'Roboto', regular;
+    font-size: 1.6rem;
+    border-radius: 4px;
+    width: 950px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    resize: none;
+    display: flex;
+    width: 100%;
+}
+/* ======================================
+            ADMIN CHEFS INDEX 
+=========================================*/
+.admin_manage_chefs {
+    margin-bottom: 30px;
+    margin-left: 15px;
+}
+.admin_manage_chefs .admin_manage_chefs_container {
+    display: flex;
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+}
+.admin_manage_chefs .admin_manage_chefs_container h1 {
+    font-size: 24px;
+    font-family: 'Roboto', regular;
+    font-weight: bold;
+    color: #111111;
+}
+.chefs_adm {
+    margin: 0px 15px 0px 15px;
+}
+.chefs_container_adm {
+    display: grid;
+    width: 100%;
+    max-width: 940px;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0px 20px;
+}
+.chef_adm {
+    width: 100%;
+    cursor: pointer;
+    height: 94px;
+    display: grid;
+    grid-template-columns: 84px 1fr;
+}
+.chef_adm .chef__image-container_adm {
+    width: 64px;
+    height: 64px;
+}
+.chef_adm .chef__image-container_adm img {
+    border-radius: 100%;
+    max-width: 100%;
+    max-height: 64px;
+}
+.chef_adm .chef__content_adm {
+    font-family: 'Roboto', regular;
+    font-size: 18px;
+    color: #111111;
+    width: auto;
+}
+.chefs_adm .chefs_container_adm .chef_adm .chef__content_adm a {
+    font-family: 'Roboto', regular;
+    font-weight: bold;
+    font-size: 14px;
+    color: #6558C3;
+    text-decoration: none;
+}
+.chef_adm .chef__content_adm .chef-total_recipes_adm {
+    font-size: 1.4rem;
+    color: #666666;
+    margin-top: 5px;
+}
+/* ======================================
+            ADMIN CHEFS SHOW 
+=========================================*/
+.showInfo.chefs {
+    margin: 0px 15px 25px 15px;
+}
+.showInfo_main.chefs {
+    display: flex;
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+}
+.showInfo_container.chefs {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+.showInfo_container.chefs h1 {
+    font-size: 2.4rem;
+    color: #111111;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.edit-container.chefs {
+    background: #6558C3;
+    border-radius: 4px;
+    width: 136px;
+    height: 37px;
+    display: grid;
+    margin-left: 10px;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+}
+.edit-container.chefs a {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+.wrapper_main {
+    display: flex;
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+#wrapper {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+#wrapper img {
+    max-width: 200;
+    max-height: 200px; 
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+#wrapper h1 {
+    font-size: 3.6rem;
+    line-height: 4.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: grid;
+    text-align: center;
+}
+#wrapper h2 {
+    font-size: 1.9rem;
+    line-height: 2.4rem;
+    font-weight: normal;
+    opacity: 0.5;
+    max-width: 400px;
+    margin: 0px auto;
+    display: grid;
+    text-align: center;
+}
+.most_viewed_admin {
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+.most_viewed_admin .viewed_container_admin {
+    display: flex;
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+}
+.most_viewed_admin .viewed_container_admin h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+/* ======================================
+            ADMIN CHEFS EDIT 
+=========================================*/
+.showInfoAdminEditChefsMain {
+    margin: 0px 15px 0px 15px;
+}
+.showInfoAdminEditChefsContainer {
+    display: flex;
+    width: 100%;
+    max-width: 920px;
+    margin: auto;
+}
+.showInfoAdminEditChefs {
+    display: grid;
+    grid-template-columns: 6fr 1fr 1fr;
+}
+.showInfoAdminEditChefs h1 {
+    font-size: 2.4rem;
+    color: #111111;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+#form-delete.deleteChefs button[type="submit"] {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: #DC4747;
+    color: white;
+    border-radius: 4px;
+    width: 92px;
+    height: 37px;
+    margin-left: 10px;
+}
+.showInfoAdminEditChefs button[type="submit"] {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: #6558C3;
+    color: white;
+    border-radius: 4px;
+    width: 139px;
+    height: 37px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.showInfoAdminEditMainItemsChefs {
+    margin: 0px 15px 25px 15px;
+}
+.showInfoAdminEditContainerItemsChefs {
+    display: flex;
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+    flex-direction: column;
+}
+.item.edit.chefs div:nth-child(1) {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.item.edit.chefs div input {
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    height: 30px;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+.item.edit.chefs div:last-child {
+    margin-bottom: 5px;
+}
+/* ======================================
+            ADMIN CHEFS CREATE 
+=========================================*/
+.cardCreate.chefs {
+    margin: 0px 15px 25px 15px;
+}
+.showInfoAdminCreateContainer.chefs {
+    display: flex;
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+}
+.showInfoAdminCreate.chefs {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+}
+.showInfoAdminCreate.chefs h1 {
+    font-size: 2.4rem;
+    color: #111111;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.showInfoAdminCreate.chefs button[type="submit"] {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: #6558C3;
+    color: white;
+    border-radius: 4px;
+    width: 139px;
+    height: 37px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.cardCreateContainer.chefs {
+    display: flex;
+    width: 100%;
+    max-width: 920px;
+    margin: auto;
+    flex-direction: column;
+}
+.cardCreate .cardCreateContainer .item div:nth-child(1) {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.cardCreate .cardCreateContainer .item div input {
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 930px;
+    height: 30px;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+.cardCreate .item div:last-child {
+    margin-bottom: 5px;
+}
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+                             USER MEDIA QUERIES 
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+
+@media (max-width: 924px) {
+    .header_user .header_container .header_grid .header {
+        margin-left: 0px;
+    }
+}
+@media (max-width: 649px) {
+    html {
+        font-size: 50%;
+    }
+    .panel .panel_container {
+        height: auto;
+        flex-direction: column;
+    }
+    .panel .panel_text_container {
+        margin-top: 35px;
+        margin-right: 50px;
+        margin-left: 65px;
+        height: auto;
+        max-width: 600px;
+    }
+    .img_container {
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .panel_container .img_container img {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 619px) {
+    .most_viewed .viewed_container {
+        justify-content: center;
+    }
+}
+@media (max-width: 500px) {
+    .cardsAdmin_container {
+        display: grid;
+        width: 100%;
+        max-width: 250px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 0px 20px;
+    }
+}
+@media (max-width: 425px) {
+    .title-string_recipes.admin {
+        font-size: 70%;
+    }
+    #wrapper h1 {
+        font-size: 170%;
+    }
+}
+
+@media (max-width: 375px) {
+    .card {
+        height: 180px;
+    }
+}
+@media (max-width: 320px) {
+    .card {
+        height: 170px;
+    }
+    .header_user .header_container a:nth-child(2) {
+        margin-left: 5.0rem;
+    }
+}

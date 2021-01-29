@@ -1,0 +1,108 @@
+{% extends "admin/adminLayout.njk" %}
+
+{% block content %}
+
+<header class="header_admin">
+    <div class="header_container">
+        <div class="header_grid">
+            <a class="foodfy_logo">Foodfy</a>
+            <a href="/admin/recipes">Recipes</a>
+            <a href="/admin/chefs" style="filter: brightness(50%)">Chefs</a>
+        </div>
+    </div>
+</header>
+
+<form class="cardCreate" method="POST" action="/admin/recipes">
+    
+    <div class="showInfoAdminCreateContainer">
+        <div class="showInfoAdminCreate">
+            <h1>
+                Create Recipe
+            </h1>
+
+            <button type="submit">Save Recipe</button>
+        </div>
+    </div>
+
+    <div class="cardCreateContainer">
+        <div class="item">
+            <div>Recipe Image</div>
+            <div>
+                <input
+                    type="url"
+                    name="image"
+                    placeholder="http://"
+                >
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Chef</div>
+            <div>
+                <select class="selectChefCreate" name="chef_id">
+                    {% for chef in chefOptions %}}
+                        <option value="" disabled selected hidden>Select a Chef</option>
+                        <option value="{{ chef.id }}">
+                            {{ chef.name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Recipe Title</div>
+            <div>
+                <input
+                    type="text"
+                    name="title"
+                    placeholder="Type the recipe title here."
+                >
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Ingredients</div>
+            <div>
+                <ul id="addStepIngredient">
+                    <input
+                        type="text"
+                        name="ingredients[]"
+                        placeholder="Type one ingredient here."
+                    >
+                </ul>
+            </div>
+            <div class="addIngredient">
+                Add Ingredients
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Preparation</div>
+            <div>
+                <ul id="addStepPreparation">
+                    <input
+                        type="text"
+                        name="preparation[]"
+                        placeholder="Type one preparation step here."
+                    >
+                </ul>
+            </div>
+            <div class="addPreparationSteps">
+                Add Preparation Step
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Information</div>
+            <div class="informationCreate">
+                <textarea 
+                    name="information"
+                    placeholder="Type the recipe information."
+                ></textarea>
+            </div>
+        </div>
+    </div>
+</form>
+
+{% endblock content %}

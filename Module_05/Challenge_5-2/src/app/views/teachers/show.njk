@@ -1,0 +1,49 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<div class="card">
+    <section class="avatar" style="background: url({{ teacher.avatar_url }}) no-repeat center center / cover">
+
+    </section>
+    <section class="details">
+
+    <h3>
+        Details
+    </h3>
+    <div class="item">
+        <div>Teacher</div>
+        <div>{{ teacher.name }}</div>
+    </div>
+
+    <div class="item">
+        <div>Age</div>
+        <div>{{ teacher.age }}</div>
+    </div>
+
+    <div class="item">
+        <div>Scholarity</div>
+        <div>{{ teacher.education_level }}</div>
+    </div>
+
+    <div class="item">
+        <div>Type of Classes</div>
+            <span>{{ "Online Classes" if teacher.class_type == "online" else "Tradicional Classes" }}</span>
+    </div>
+
+    <div class="item">
+        <div>Fields</div>
+        <div>{{ teacher.subjects_taught }}</div>
+    </div>
+
+    <div class="item">
+        <div>Since</div>
+        <div>{{ teacher.created_at }}</div>
+    </div>
+
+    <a href="/teachers/{{ teacher.id }}/edit" class="button">Edit</a>
+
+    </section>
+</div>
+
+{% endblock content %}

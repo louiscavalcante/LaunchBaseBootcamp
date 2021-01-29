@@ -1,0 +1,26 @@
+{
+    "members": [
+        {
+            "id": 1,
+            "avatar_url": "https://i.pinimg.com/originals/dd/59/4e/dd594e241abf617abed2b7d586c19ef9.jpg",
+            "name": "Luiza",
+            "email": "luiza@hotmail.com",
+            "birth": 590284800000,
+            "gender": "F",
+            "blood": "O+",
+            "weight": "60",
+            "height": "170"
+        }
+    ],
+    "instructors": [
+        {
+            "id": 1,
+            "name": "Luiz",
+            "avatar_url": "https://cdnb.artstation.com/p/users/avatars/000/059/173/large/5673e1df353e56c9040561de4f6c493a.jpg?1523894189",
+            "birth": 590284800000,
+            "gender": "M",
+            "services": "Musculation, Crossfit",
+            "created_at": 1589167655995
+        }
+    ]
+}

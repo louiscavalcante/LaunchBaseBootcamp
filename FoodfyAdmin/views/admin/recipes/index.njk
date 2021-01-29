@@ -1,0 +1,36 @@
+{% extends "admin/recipes/adminLayout.njk" %}
+
+{% block content %}
+
+<div class="major">
+    <h1>
+        Manage Recipes
+    </h1>
+</div>
+
+<section class="cardsAdmin">
+
+    {% for item in items %}
+        <div class="cardAdmin" id="{{ item.id }}">
+            <div class="card__image-containerAdmin">
+                <img src="{{ item.image }}" alt="{{ item.title }}">               
+            </div>
+        </div>
+        <div class="cardInfoAdmin">
+            <div class="card__contentAdmin">
+                <p class="title-stringAdmin"> 
+                    {{ item.title }}
+                </p>
+                <p class="author-stringAdmin">
+                    {{ item.author }}
+                </p>
+                <a class="button-Admin" href="/admin/recipes/{{ item.id }}">
+                    Show
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+    
+</section>
+
+{% endblock %}

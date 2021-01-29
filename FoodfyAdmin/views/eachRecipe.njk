@@ -1,0 +1,90 @@
+{% extends "layout.njk" %}
+
+{% block eachRecipe %}
+
+<header>
+    <div class="links">
+        <a class="foodfy" href="/">Foodfy</a>
+        <div class="menu">
+            <a href="/about">About</a>
+            <a href="/recipes">Recipes</a>
+        </div>
+    </div>
+</header>
+
+<section class="cards_eachRecipe">
+
+    <div class="card_eachRecipe" id="">
+        <div class="card__image-container_eachRecipe">
+            <img src="{{ items.image }}" alt="{{ items.title }}">               
+        </div>
+        <div class="card__content_eachRecipe">
+            <p class="title-string_eachRecipe"> 
+                {{ items.title }}
+            </p>
+            <p class="author-string_eachRecipe">
+                {{ items.author }}
+            </p>
+        </div>
+
+        <div class="details_container">
+            
+            <div class="details_main_container">
+                <a class="details_main_message">
+                    Ingredients
+                </a>
+                <a class="button_ingredients button-hide">
+                    Hide
+                </a>
+        
+            </div>
+
+            <div class="info_ingredients details_paragraph">
+                <ul>
+                    {% for item in items.ingredients %}
+                    <li>
+                        {{ item + ';'}}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="details_main_container">
+                <a class="details_main_message">
+                    Preparation
+                </a>
+                <a class="button_prepation button-hide">
+                    Hide
+                </a>
+            </div>
+
+            <div class="info_preparation details_paragraph">
+                {% for item in items.preparation %}
+                <p>
+                    {{ item }}
+                </p>
+                {% endfor %}
+            </div>
+
+            <div class="details_main_container">
+                <a class="details_main_message">
+                    Information
+                </a>
+                <a class="button_information button-hide">
+                    Hide
+                </a>
+            </div>
+
+            <div class="info_information details_paragraph_information">
+                <p>
+                    {{ items.information }}
+                </p>
+            </div>
+            
+        </div>
+
+    </div>
+    
+</section>
+
+{% endblock %}

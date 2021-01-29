@@ -1,0 +1,14 @@
+{
+    "teachers": [
+        {
+            "id": 1,
+            "name": "Luiz",
+            "avatar_url": "http://www.google.com.br",
+            "birth": 590284800000,
+            "scholarity": "Doctorate Degree",
+            "classes": "online",
+            "fields": "Physics, Science",
+            "created_at": 1588992434724
+        }
+    ]
+}

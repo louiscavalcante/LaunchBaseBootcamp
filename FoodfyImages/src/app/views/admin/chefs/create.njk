@@ -1,0 +1,52 @@
+{% extends "admin/adminLayout.njk" %}
+
+{% block content %}
+
+<header class="header_admin">
+    <div class="header_container">
+        <div class="header_grid">
+            <a class="foodfy_logo">Foodfy</a>
+            <a href="/admin/recipes">Recipes</a>
+            <a href="/admin/chefs" style="filter: brightness(50%)">Chefs</a>
+        </div>
+    </div>
+</header>
+
+<form class="cardCreate chefs" method="POST" action="/admin/chefs">
+
+    <div class="showInfoAdminCreateContainer chefs">
+        <div class="showInfoAdminCreate chefs">
+            <h1>
+                Creating Chef
+            </h1>
+
+            <button type="submit">Save Chef</button>
+        </div>
+    </div>
+
+    <div class="cardCreateContainer chefs">
+        <div class="item">
+            <div>Chef Image</div>
+            <div>
+                <input
+                    type="url"
+                    name="avatar_url"
+                    placeholder="http://"
+                >
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Chef Name</div>
+            <div>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Type the Chef name here."
+                >
+            </div>
+        </div>
+    </div>
+</form>
+
+{% endblock content %}

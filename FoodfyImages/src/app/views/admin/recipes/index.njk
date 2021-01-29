@@ -1,0 +1,52 @@
+{% extends "admin/adminLayout.njk" %}
+
+{% block content %}
+
+<header class="header_admin">
+    <div class="header_container">
+        <div class="header_grid">
+            <a class="foodfy_logo">Foodfy</a>
+            <a href="/admin/recipes">Recipes</a>
+            <a href="/admin/chefs" style="filter: brightness(50%)">Chefs</a>
+        </div>
+    </div>
+</header>
+
+<div class="admin_manageRecipes">
+    <div class="admin_manageRecipes_container">
+        <h1>
+            Manage Recipes
+        </h1>
+    </div>
+</div>
+
+<section class="cardsAdminMargin">
+    <div class="cardsAdmin">
+
+        {% for item in items %}
+            <div class="cardsAdmin_container">
+
+                <div class="cardAdmin" id="{{ item.id }}">
+                    <div class="card__image-containerAdmin">
+                        <img src="{{ item.image }}" alt="Recipe Image">               
+                    </div>
+                </div>
+                <div class="cardInfoAdmin">
+                    <div class="card__contentAdmin">
+                        <p class="title-stringAdmin"> 
+                            {{ item.title }}
+                        </p>
+                        <p class="author-stringAdmin">
+                            by {{ item.chef_name }}
+                        </p>
+                        <a class="button-Admin" href="/admin/recipes/{{ item.id }}">
+                            Show
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

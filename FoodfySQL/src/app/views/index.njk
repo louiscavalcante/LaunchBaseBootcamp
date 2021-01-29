@@ -1,0 +1,74 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<header class="header_user">
+    <div class="header_container">
+        <div class="header_grid">
+            <a class="foodfy_logo" href="/">Foodfy</a>
+            <a href="/about">About</a>
+            <a href="/recipes">Recipes</a>
+            <a href="/chefs">Chefs</a>
+
+            <div class="header">
+                <form action="/search" method="GET">
+                    <input type="text"
+                        name="filter"
+                        placeholder="Search a recipe"
+                        value="{{ filter }}"
+                    >
+                    <button type="submit">Filter</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="panel">
+    <div class="panel_container">
+        <div class="panel_text_container">
+            <h1>
+                <strong>The best recipes</strong>
+            </h1>
+            <p>
+                Learn how to build the best dishes with recipes created by professionals from all over the world.
+            </p>
+        </div>
+        <div class="img_container">
+            <img src="/assets/chef.png" alt="Chef" srcset="">
+        </div>
+        
+    </div>
+</div>
+
+<div class="most_viewed">
+    <div class="viewed_container">
+        <h1>
+            Most Viewed
+        </h1>
+    </div>
+</div>
+
+<section class="cards">
+    <div class="cards_container">
+
+        {% for item in items %}
+            <a class="card" id="{{ item.id }}" href="/recipes/{{ item.id }}">
+                <div class="card__image-container">
+                    <img src="{{ item.image }}" alt="{{ item.title }}">               
+                </div>
+                <div class="card__content">
+                    <p class="title-string"> 
+                        {{ item.title }}
+                    </p>
+                    <p class="author-string">
+                        by {{ item.chef_name }}
+                    </p>
+                </div>
+            </a>
+        {% endfor %}
+        
+    </div>
+</section>
+
+{% endblock %}

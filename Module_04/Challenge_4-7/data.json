@@ -1,0 +1,44 @@
+{
+    "students": [
+        {
+            "id": 1,
+            "name": "Luiza",
+            "email": "luiza@hotmail.com",
+            "avatar_url": "https://i.pinimg.com/originals/dd/59/4e/dd594e241abf617abed2b7d586c19ef9.jpg",
+            "birth": 590284800000,
+            "schoolYear": "12",
+            "workload": "8"
+        },
+        {
+            "id": 2,
+            "avatar_url": "https://cdnb.artstation.com/p/assets/images/images/001/863/575/large/irakli-nadar-artstation-da.jpg?1453903033",
+            "name": "Mari",
+            "email": "mari@hotmail.com",
+            "birth": 1065916800000,
+            "schoolYear": "11",
+            "workload": "1"
+        }
+    ],
+    "teachers": [
+        {
+            "id": 1,
+            "name": "Luiz",
+            "avatar_url": "https://cdnb.artstation.com/p/users/avatars/000/059/173/large/5673e1df353e56c9040561de4f6c493a.jpg?1523894189",
+            "birth": 590284800000,
+            "scholarity": "Doctorate Degree",
+            "classes": "online",
+            "fields": "Physics, Science",
+            "created_at": 1588992434724
+        },
+        {
+            "id": 2,
+            "name": "Arthur",
+            "avatar_url": "https://i.pinimg.com/originals/09/eb/b7/09ebb7b5ffbae703fe4c1cfa8e6d66e3.jpg",
+            "birth": 344476800000,
+            "scholarity": "Master's Degree",
+            "classes": "online",
+            "fields": "Chemistry, Biology, Microbiology",
+            "created_at": 1589494077602
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<header class="header_user_search">
+    <div class="header_container">
+        <div class="header_grid">
+            <a class="foodfy_logo" href="/">Foodfy</a>
+            <a href="/about">About</a>
+            <a href="/recipes">Recipes</a>
+            <a href="/chefs">Chefs</a>
+        </div>
+    </div>
+</header>
+
+<section class="cards_recipes">
+
+    <div class="card_recipes" id="{{ item.id }}">
+        <div class="card__image-container_recipes">
+            <img src="{{ items.image }}" alt="{{ items.title }}">               
+        </div>
+        <div class="card__content_recipes">
+            <p class="title-string_recipes"> 
+                {{ items.title }}
+            </p>
+            <p class="author-string_recipes">
+                by {{ items.chef_name }}
+            </p>
+        </div>
+
+        <div class="details_container eachRecipe">
+            
+            <div class="details_main_container">
+                <a class="details_main_message">
+                    Ingredients
+                </a>
+                <a class="button_ingredients button-hide">
+                    Hide
+                </a>
+        
+            </div>
+
+            <div class="info_ingredients details_paragraph hideClass">
+                <ul class="dashed">
+                    {% for item in items.ingredients %}
+                    <li>
+                        {{ item + ';'}}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="details_main_container">
+                <a class="details_main_message">
+                    Preparation
+                </a>
+                <a class="button_prepation button-hide">
+                    Hide
+                </a>
+            </div>
+
+            <div class="info_preparation details_paragraph hideClass">
+                <ul>
+                    {% for item in items.preparation %}
+                    <li>
+                        {{ item }}
+                    </li>
+                    {% endfor %}
+                </ul>    
+            </div>
+
+            <div class="details_main_container">
+                <a class="details_main_message">
+                    Information
+                </a>
+                <a class="button_information button-hide">
+                    Hide
+                </a>
+            </div>
+
+            <div class="info_information details_paragraph_information hideClass">
+                <p>
+                    {{ items.information }}
+                </p>
+            </div>
+            
+        </div>
+
+    </div>
+    
+</section>
+
+{% endblock %}

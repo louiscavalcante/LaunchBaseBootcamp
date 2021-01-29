@@ -1,0 +1,14 @@
+{
+    "teachers": [
+        {
+            "id": 1,
+            "name": "Luiz",
+            "avatar_url": "https://cdnb.artstation.com/p/users/avatars/000/059/173/large/5673e1df353e56c9040561de4f6c493a.jpg?1523894189",
+            "birth": 590284800000,
+            "scholarity": "Doctorate Degree",
+            "classes": "online",
+            "fields": "Physics, Science",
+            "created_at": 1588992434724
+        }
+    ]
+}
