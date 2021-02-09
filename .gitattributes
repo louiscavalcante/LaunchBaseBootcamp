@@ -1,6 +1,6 @@
 * linguist-vendored
 *.js linguist-vendored=false
-*.html linguist-detectable
-*.css linguist-detectable
-*.sql linguist-detectable
-*.njk linguist-detectable
+*.html linguist-detectable=true
+*.css linguist-detectable=true
+*.sql linguist-detectable=true
+*.njk linguist-detectable=true
